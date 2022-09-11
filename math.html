@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <title>YU網站</title>
+        <link rel="icon" type="image/x-icon" href="icon.png">
+        <link href="math.css" rel="stylesheet" type="text/css">
+    </head>
+    <body onload="current_time()">
+        <div class="menu-set">
+            <a class="YU" href="index.html">YU</a>
+            <div class="respond-set">
+                <a  class="respond-set" href="home.html">
+                    <div class="home" onmouseover=" respond_over(this);" onmouseout=" respond_out(this);">首頁</div>
+                </a>
+                <a  class="respond-set" href="math.html">
+                    <div class="math">技術展現</div>
+                </a>
+                <a  class="respond-set" href="respond1.html">
+                    <div class="respond1" onmouseover=" respond_over(this);" onmouseout=" respond_out(this);">回應一</div>
+                </a>
+                <a  class="respond-set" href="respond2.html">
+                    <div class="respond2" onmouseover=" respond_over(this);" onmouseout=" respond_out(this);">回應二</div>
+                </a>
+                <a  class="respond-set" href="respond3.html">
+                    <div class="respond3" onmouseover=" respond_over(this);" onmouseout=" respond_out(this);">回應三</div>
+                </a>
+                <a  class="respond-set" href="respond4.html">
+                    <div class="respond4" onmouseover=" respond_over(this);" onmouseout=" respond_out(this);">回應四</div>
+                </a>
+                <a  class="respond-set" href="respond5.html">
+                    <div class="respond5" onmouseover=" respond_over(this);" onmouseout=" respond_out(this);">回應五</div>
+                </a>             
+                <a  class="respond-set" href="respond6.html">
+                    <div class="respond6" onmouseover=" respond_over(this);" onmouseout=" respond_out(this);">回應六</div>
+                </a>               
+                <a  class="respond-set" href="respond7.html">
+                    <div class="respond7" onmouseover=" respond_over(this);" onmouseout=" respond_out(this);">回應七</div>
+                </a>                
+            </div>
+        </div>
+        <form oninput="total.value=parseInt(text1.value)+parseInt(text2.value)">
+            <div class="title1" id="title1">  
+                <div style="font-size:25px ; color:#FFF;">1. HTML output 顯示表單計算結果 :</div> 
+                &emsp;                               
+                <input type="range" class="text1" value="50" name="text1" id="text1"/>
+                <div class="add"><b>+</b></div>
+                <input class="text2" value="0" name="text2" id="text2" style="font-size:18px;" />
+                <div class="equal"><b>=</b></div>
+                <output name="total" class="total" for="text1 text2">50</output>
+            </div>
+        </form>
+        <div class="ID-number">
+            <div style="margin-left:30px;">2. 身分證字號驗證 :</div>	
+            &nbsp;
+            <div>
+                請輸入身分證字號(英文字母請大寫) :
+            </div>
+            &nbsp;
+            <div>
+                <input type="text" name="iid" style="font-size:18px;" id="iid">
+            </div>
+            &nbsp;
+            <div >		 	 
+                <input type="button" name="ib" id="ib" style="font-size:16px;" value="驗證" onclick="iiid();">
+            </div>
+            &nbsp;
+            <div >		 	 
+                <input type="button" name="cls" id="cls" style="font-size:16px;" value="清除" onclick="cls();">
+            </div>
+            &nbsp;
+            <div >			
+                <input type="text" name="is" id="is" class="input-is" style = "text-align:center;color:#FFF; font-size:18px;" disabled>
+            </div>
+        </div>
+        <div class="bmi-set">
+            <div>3. BMI 計算 :</div>
+            <div class="bmi-set2">
+                身高(公尺):
+                <input type="text" name="ih" id="ih" style="font-size:18px;" placeholder="1.7公尺">
+                <br> 
+                體重(公斤):
+                <input type="text" name="iw" id="iw"  style="font-size:18px;" placeholder="60公斤">
+                <br>
+                <p></p>
+                <input type="button" name="ib2" id="ib2" value="..執行BMI計算.." style="width:180px; height:30px; font-size:18px;" onclick="bmi();">
+                <input type="button" name="cls2" id="cls2" value="清除" style="width:170px; height:30px; font-size:18px;" onclick="clsbmi();">
+                <br>
+                <p></p>
+                BMI數值:
+                <input type="text" name="is2" id="is2" style="font-size:18px;" disabled>
+                <br>
+                診斷:
+                <input type="text" name="ij" id="ij" style="font-size:18px;" disabled>
+            </div>
+        </div>
+        
+        <div class="time">
+            <div style="color: #FFF; font-size:25px; margin-left:20px; margin-top:40px;">4. 目前時間 :</div>
+            <div id="current" style="color: #FFF; font-size:25px; margin-left:60px; margin-top:10px;"></div>
+            <form method="POST" id="ifrom" name="iform" >
+                <b id="iip"></b>
+                <input type="text" name="itext" id="itext" style="font-size:18px; margin-left:60px; margin-top:10px;"> 
+                <input type="button" name="ibutton" id="ibutton" value="Run Timer" style="font-size:18px;" onclick="calltimer();" >
+                <input type="button" name="istopbutton" id="istopbutton" style="font-size:18px;" onclick="stoptimer();" value="Stop Timer">
+            </form>
+        </div>
+        <div class="COPYRIGHT">COPYRIGHT © 2022 梅恩語
+            <br/>
+            Email:yoyo89895300@gmail.com
+        </div>
+
+        <script>
+            let respond_over=(elem)=>{
+                elem.style.color="#53565C";
+            }
+            let respond_out=(elem)=>{
+                elem.style.color="#FFF";
+            }
+        </script>
+        <script>	
+			let iiid=()=>{
+				let getid=document.getElementById("iid");
+				let getis=document.getElementById('is');				
+				if(getid.value.length!=10){
+                    getis.value="身分證字號 輸入錯誤!!";
+                    getis.style.color="#FFF";
+                }
+				else{
+					let num=new Array(10,11,12,13,14,15,16,17,0,18,19,20,21,22,0,23,24,
+     				25,26,27,28,29,32,30,31,33);
+					let value=new Array(11);
+					let y=0;
+					value[0]=(num[getid.value[0].charCodeAt()-65])/10;
+      				value[1]=(num[getid.value[0].charCodeAt()-65])%10;
+					for (let i=1;i<=9;i++){
+						value[i+1]=getid.value[i].charCodeAt()-48;
+                    }
+					for (let j=1;j<10;j++){
+						y += value[j]*(10-j);
+                    }
+					y += (value[0]+value[10]);									
+					if (parseInt(y%10)==0){
+                            getis.value="身分證字號 驗證正確!!";
+                            getis.style.color="#53FF53";
+                        }
+     				else {
+                        getis.value="身分證字號 驗證錯誤!!";
+                        getis.style.color="#FF2D2D";
+                    } 
+     		 	}		
+			}
+            let cls=()=>{
+                let getid=document.getElementById("iid");
+				let getis=document.getElementById('is');
+                getid.value="";
+                getis.value="";
+            }		
+	</script> 
+    <script>
+		let bmi=()=>{
+			let getw=document.getElementById("iw");
+			let geth=document.getElementById("ih");
+			let bmi=getw.value/(geth.value*geth.value);
+			let getbmi=document.getElementById('is2');
+			getbmi.value=bmi;
+			let getjudge=document.getElementById('ij');
+			if(bmi<18.5){
+				getjudge.value="體重過輕";
+                getbmi.style.color="#0072E3";
+                getjudge.style.color="#0072E3";
+			}
+			else if(18.5<=bmi && bmi<24){
+				getjudge.value="正常範圍";
+                getbmi.style.color="#00BB00";
+                getjudge.style.color="#00BB00";
+			}
+			else if(24<=bmi && bmi<27){
+				getjudge.value="異常範圍-過重";
+                getbmi.style.color="#FF8040";
+                getjudge.style.color="#FF8040";
+			}
+			else if(27<=bmi && bmi<30){
+				getjudge.value="異常範圍-輕度肥胖";
+                getbmi.style.color="#FF5809";
+                getjudge.style.color="#FF5809";
+			}
+			else if(30<=bmi && bmi<35){
+				getjudge.value="異常範圍-中度肥胖";
+                getbmi.style.color="#D94600";
+                getjudge.style.color="#D94600";
+			}
+			else if(bmi>=35){
+				getjudge.value="異常範圍-重度肥胖";
+                getbmi.style.color="#AE0000";
+                getjudge.style.color="#AE0000";
+			}									
+		}
+        let clsbmi=()=>{
+            let getw=document.getElementById("iw");
+			let geth=document.getElementById("ih");
+			let getbmi=document.getElementById('is2');
+			let getjudge=document.getElementById('ij');
+            getw.value="";
+            geth.value="";
+            getbmi.value="";
+            getjudge.value="";
+        }
+	</script> 
+    <script>
+        let thetimer;
+        let calltimer=()=>{
+            thetimer=setInterval(alertmessage, 500);//500 milisecond 執行事件的時間間隔
+        }
+        let alertmessage=()=>{
+            let theform=document.iform;
+            const d = new Date();
+            let seconds = d.toLocaleTimeString();
+            theform.itext.value=seconds;
+        }
+        let stoptimer=()=>{
+            clearInterval(thetimer);
+        }	
+	</script>
+    <script>
+        let current_time=()=>{
+            let NowDate=new Date();
+            let y=NowDate.getFullYear();
+            let m=NowDate.getMonth()+1;
+            let d=NowDate.getDate();
+            let h=NowDate.getHours();
+            let minutes=NowDate.getMinutes();
+            if(h<12){
+                document.getElementById('current').innerHTML=y+' 年 '+m+' 月 '+d+' 日 '+' 上午 '+h+' 時 '+minutes+' 分' ;
+            }
+            else{
+                document.getElementById('current').innerHTML=y+' 年 '+m+' 月 '+d+' 日 '+' 下午 '+h+' 時 '+minutes+' 分' ;
+            }
+            setTimeout('current_time()',1000);
+        }
+    </script>
+    </body>
+</html>

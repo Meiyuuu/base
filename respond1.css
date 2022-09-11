@@ -1,0 +1,163 @@
+body{
+    background-color: rgba(0,0,0,0.5);
+    background-blend-mode: multiply;
+    background-image:url('starry_sky.png');
+    margin:0px;
+    padding:0px;
+}
+.menu-set{
+    display:flex; 
+    position: fixed; /*固定div*/
+    background-color: rgba(53, 63, 69, 0.9);
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    height: 60px;
+}
+.YU{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size:40px;
+    margin-left: 60px;
+    color: #FFF;
+    cursor: pointer; 
+    font-family:fantasy;
+    text-decoration:none;
+}
+.respond-set{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-family:fantasy;
+    cursor: default;
+    padding: 1px;
+}
+.home{
+    position: fixed;
+    font-size: 17px;
+    right:795px;
+    color:#FFF;
+    cursor: pointer;
+}
+.math{
+    position: fixed;
+    font-size: 17px;
+    right:685px;
+    color:#FFF;
+    cursor: pointer;
+}
+.respond1{
+    position: fixed;
+    font-size: 16px;
+    right:595px;
+    color:#53565C;
+    cursor: pointer;
+}
+.respond2{
+    position: fixed;
+    font-size: 17px;
+    right:505px;
+    color:#FFF;
+    cursor: pointer;
+}
+.respond3{
+    position: fixed;
+    font-size: 17px;
+    right:415px;
+    color:#FFF;
+    cursor: pointer;
+}
+.respond4{
+    position: fixed;
+    font-size: 17px;
+    right:325px;
+    color:#FFF;
+    cursor: pointer;
+}
+.respond5{
+    position: fixed;
+    font-size: 17px;
+    right:235px;
+    color:#FFF;
+    cursor: pointer;
+}
+.respond6{
+    position: fixed;
+    font-size: 17px;
+    right:145px;
+    color:#FFF;
+    cursor: pointer;
+}
+.respond7{
+    position: fixed;
+    font-size: 17px;
+    right:55px;
+    color:#fff;
+    cursor: pointer;
+}
+.title1{
+    display:flex;
+    width: 100%;
+    margin-top: 100px;
+}
+.me-img{
+    position: fixed;
+    width: 30vw;
+    height: 30vw; 
+    margin-right: 40px;
+    margin-left: 60px;
+    margin-top:70px;
+    border-radius: 50%;
+    background-image: url("me.jpg");
+    background-size: 110%;
+}
+.resume2{
+    position: fixed;
+    left:570px;
+    top: 170px;
+    cursor: default; 
+}
+.Introduction-set{
+    font-size: 50px;
+    margin-right: 30px;
+    font-family:monospace; 
+    color: #FAEEC7;
+}
+.content{
+    margin-top: 20px;
+    margin-left: 5px;
+    font-size: 32px;
+    font-family:monospace; 
+    color: #FFF; 
+}
+.COPYRIGHT{
+    text-align: center;
+    height: 50px;
+    width: 100%;
+    margin-top: 650px;
+    background-color: rgba(53, 63, 69, 0.9);
+    font-family:PMingLiU;
+    color: #FFF;
+}
+/*
+@media (max-width:800px){
+    .body{
+        background-size: 40%;
+    }
+}
+@media (max-width:520px){
+    .body{
+        background-size: 45%;
+    }
+}
+@media (max-width:470px){
+    .body{
+        background-size: 48%;
+    }
+}
+@media (max-width:390px){
+    .body{
+        background-size: 52%;
+    }
+}*/
